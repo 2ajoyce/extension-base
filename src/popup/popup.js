@@ -1,4 +1,4 @@
-document.querySelectorAll("[data-i18n]").forEach(el => {
+document.querySelectorAll("[data-i18n]").forEach((el) => {
   el.textContent = chrome.i18n.getMessage(el.dataset.i18n);
 });
 
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   logButton.addEventListener("click", () => {
-    console.log("Popup button clicked!");
+    console.debug("Popup button clicked!");
 
     chrome.storage.local.get("clickCounter", (data) => {
       let newCount = (data.clickCounter || 0) + 1;

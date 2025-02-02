@@ -1,4 +1,4 @@
-console.log("Background script loaded.");
+console.debug("Background script loaded.");
 
 // Function to create or remove context menu
 function updateContextMenu(enabled) {
@@ -9,9 +9,9 @@ function updateContextMenu(enabled) {
         title: "Reset Click Counter",
         contexts: ["all"],
       });
-      console.log("Context menu created.");
+      console.debug("Context menu created.");
     } else {
-      console.log("Context menu disabled.");
+      console.debug("Context menu disabled.");
     }
   });
 }
@@ -39,7 +39,7 @@ chrome.runtime.onStartup.addListener(() => {
 
 // Listen for messages
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  console.log("Received message:", message);
+  console.debug("Received message:", message);
 
   if (message.greeting === "Hello from popup!") {
     console.log(`Button clicked ${message.count} times`);
@@ -59,13 +59,16 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
     // Reset counter in storage
     chrome.storage.local.set({ clickCounter: 0 }, () => {
-      console.log("Click counter reset.");
+      console.debug("Click counter reset.");
 
       // Update badge
       updateBadge(0);
+      console.debug("Badge reset.");
 
       // Notify all pages that use the counter
+      // This throws an error if the pop-up is not open as there is no listener
       chrome.runtime.sendMessage({ counterReset: true });
+      console.debug("counterReset message sent");
     });
   }
 });

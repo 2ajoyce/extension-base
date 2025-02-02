@@ -16,7 +16,9 @@ This is a reusable Firefox extension template using Manifest V3.
 ## Installation
 
 1. Clone the repo
-2. Load the `src` folder as an "Unpacked Extension" in `about:debugging`
+2. Load the `src` folder as an "Unpacked Extension" in `about:debugging` -> This Firefox
+![Firefox about debugging](images/readme/firefox_about_debugging.png)
+
 
 ## Build
 

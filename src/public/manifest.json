@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Extension Base",
-  "version": "1.0",
+  "version": "1.1.0",
   "default_locale": "en",
   "description": "A base template for Firefox extensions built with Vite and JavaScript (Manifest V3).",
   "background": {
