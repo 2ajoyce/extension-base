@@ -4,17 +4,23 @@ This is a reusable Firefox extension template using Manifest V3.
 
 ## Features
 
-- Dark mode support
+- Extension Popup
+- Options page
+  - Dark Mode
+  - Options Reset
+  - Context Menu Toggle
 - Context menu integration
-- Click counter with persistent storage
-- Popup with settings link
-- Options page with i18n
-- Keyboard shortcuts (Ctrl+Shift+U to open, Ctrl+Shift+R to reset counter)
+- Persistent storage
+- Multi Language support through `_locales` with `en` default
 
 ## Installation
 
 1. Clone the repo
 2. Load the `src` folder as an "Unpacked Extension" in `about:debugging`
+
+## Build
+
+1. `npm run build` will clean and build the dist folder
 
 ## Chrome
 
