@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Extension Options</title>
+    <link rel="icon" href="../icons/bird.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Prevents Flash of White -->
+    <script src="fouc.js"></script>
+  </head>
+  <body>
+    <div class="options-container">
+      <h1 data-i18n="settings"></h1>
+      <label class="toggle-container">
+        <input type="checkbox" id="darkMode" />
+        <span data-i18n="enable_dark_mode"></span>
+      </label>
+      <label class="toggle-container">
+        <input type="checkbox" id="contextMenuToggle" />
+        <span data-i18n="enable_context_menu"></span>
+      </label>
+      <button id="resetSettings" data-i18n="reset_settings"></button>
+      <p>Version: <span id="version"></span></p>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

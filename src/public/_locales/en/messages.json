@@ -1,0 +1,11 @@
+{
+  "extension_name": { "message": "Extension Base" },
+  "settings": { "message": "Settings" },
+  "enable_dark_mode": { "message": "Enable Dark Mode" },
+  "reset_settings": { "message": "Reset Settings" },
+  "popup_title": { "message": "Hello, World!" },
+  "button_click_me": { "message": "Click Me" },
+  "button_open_settings": { "message": "Open Settings" },
+  "confirm_reset": { "message": "Are you sure you want to reset settings?" },
+  "enable_context_menu": { "message": "Enable Context Menu" }
+}

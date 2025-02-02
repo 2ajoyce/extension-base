@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Base",
+  "version": "1.0",
+  "default_locale": "en",
+  "description": "A base template for Firefox extensions built with Vite and JavaScript (Manifest V3).",
+  "background": {
+    "service_worker": "background/background.js",
+    "scripts": ["background/background.js"]
+  },
+  "permissions": ["storage", "activeTab", "contextMenus"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "extension-base@example.com"
+    }
+  },
+  "icons": {
+    "16": "icons/bird.svg",
+    "32": "icons/bird.svg"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/bird.svg",
+      "32": "icons/bird.svg"
+    },
+    "default_title": "Extension Base",
+    "default_popup": "popup/popup.html"
+  },
+  "options_page": "options/options.html"
+}

@@ -1,0 +1,67 @@
+/* General Styles */
+html, body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.options-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Button Styling */
+button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+button:hover {
+  background-color: #d43f3f;
+}
+
+/* Dark Mode Styles */
+html.dark-mode, html.dark-mode body {
+  background-color: #222;
+  color: #fff;
+}
+
+html.dark-mode .options-container {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Softer shadow in dark mode */
+}
+
+html.dark-mode button {
+  background-color: #444;
+  color: #ddd;
+}
+
+html.dark-mode button:hover {
+  background-color: #666;
+}
+
+/* Smooth Theme Transition */
+html, body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.options-container, button {
+  transition: background-color 0.3s, color 0.3s;
+}
